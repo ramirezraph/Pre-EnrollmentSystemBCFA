@@ -1,0 +1,72 @@
+﻿@model EnrollBCFA.Models.AccountMetaData
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Ubuntu" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width"/>
+    <title>Login</title>
+    @Styles.Render("~/Content/css/css")
+
+</head>
+<body id="login-body">
+<div class="container">
+    <div class="row login-container">
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="login-textnlogo">
+                <img class="img-biglogo" src="@Url.Content("~/Content/Icons/bcfa_logo629.png")" alt="logo">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="login-form">
+                <h1>Login Form <br /><span style="font-size: 20px; color:indianred">Development Version</span></h1>
+                <h5>Fill out the form below to login.</h5>
+                @using (Html.BeginForm("Authorize", "Login", FormMethod.Post))
+                {
+                    <div class="row">
+                        <div class="row">
+                            @Html.LabelFor(model => model.Username, new { @class = "login-label" })
+                        </div>
+                        <div class="row">
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "login-textbox" } })
+                        </div>
+                        <div class="row">
+                            @Html.ValidationMessageFor(model => model.Username)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            @Html.LabelFor(model => model.Password, new { @class = "login-label" })
+                        </div>
+                        <div class="row">
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "login-textbox" } })
+                        </div>
+                        <div class="row">
+                            @Html.ValidationMessageFor(model => model.Password)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success btnLogin" name="login" value="Login" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

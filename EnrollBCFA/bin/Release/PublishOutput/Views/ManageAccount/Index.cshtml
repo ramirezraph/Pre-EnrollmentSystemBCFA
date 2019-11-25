@@ -1,0 +1,277 @@
+﻿@model IEnumerable<EnrollBCFA.Models.Account>
+@{
+    ViewBag.Title = "ManageUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="view-section">
+    <div class="teacher-header">
+        <h3 id="lblTeacher">Manage User</h3>
+    </div>
+    <div class="teacher-container" style="padding-left: 3%;">
+
+        <!-- create account -->
+        <div class="modal fade" id="modalCreateAccount" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Create an Account.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Account ID:</label><br />
+                                @Html.TextBox("accountidcr", null, new { @class = "textbox-account-noborder", @readonly = "readonly" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Account Created:</label><br />
+                                @Html.TextBox("accountcreatedcr", null, new { @class = "textbox-account-noborder", @readonly = "readonly" })
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Last Name:</label><br />
+                                @Html.TextBox("lnamecr", null, new { @class = "textbox-account" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Username:</label><br />
+                                @Html.TextBox("usernamecr", null, new { @class = "textbox-account" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>First Name:</label><br />
+                                @Html.TextBox("fnamecr", null, new { @class = "textbox-account" })
+                            </div>
+                            <div class="col-md-6">
+                                <label>Password:</label><br />
+                                @Html.Password("passwordcr", null, new { @class = "textbox-account" })
+                                <label class="noselect" style="font-weight: normal; font-size: 14px; cursor: pointer;"><input type="checkbox" onchange="document.getElementById('passwordcr').type = this.checked ? 'text' : 'password'"> Show password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- blank -->
+                            </div>
+                            <div class="col-md-6">
+                                <label>Confirm Password:</label><br />
+                                @Html.Password("confirmpasswordcr", null, new { @class = "textbox-account" })
+                                <label class="noselect" style="font-weight: normal; font-size: 14px; cursor: pointer;"><input type="checkbox" onchange="document.getElementById('confirmpasswordcr').type = this.checked ? 'text' : 'password'"> Show password</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnCreateAccountNow" type="button" class="btn btn-primary">Create</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- delete success -->
+        <div class="modal fade" id="modalDeleteAccountSuccess" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Success.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Account deleted successfully.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- delete success -->
+        <div class="modal fade" id="modalCreateAccountSuccess" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Success.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Account created successfully.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="completecreate" type="button" class="btn btn-default">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- delete failed -->
+        <div class="modal fade" id="modalDeleteAccountFailed" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Delete failed.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please select an account.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- delete warning-->
+        <div class="modal fade" id="modalDeleteAccountConfirm" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Confirm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Are you sure you want to delete this account?</h5>
+                        <h5>Account ID:<label id="lblaccountid"></label></h5>
+                        <h5>Username: <label id="lbluseraccount"></label></h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmDeleteAccount" style="width: 150px;">Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 150px;">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- create failed -->
+        <div class="modal fade" id="modalCreateAccountFailed1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Failed.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please fill out the form completely.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- create failed -->
+        <div class="modal fade" id="modalCreateAccountFailed2" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Failed.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Passwords do not match.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="label-for-sched">Account ID</h5>
+                @Html.TextBox("accountidmu", null, new { @class = "textbox-for-sched", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4">
+                <h5 class="label-for-sched">First Name</h5>
+                @Html.TextBox("firstnamemu", null, new { @class = "textbox-for-sched", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4">
+                <h5 class="label-for-sched">Last Name</h5>
+                @Html.TextBox("lastnamemu", null, new { @class = "textbox-for-sched", @readonly = "readonly" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="label-for-sched">Last Login</h5>
+                @Html.TextBox("lastloginmu", null, new { @class = "textbox-for-sched", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4">
+                <h5 class="label-for-sched">Account Created</h5>
+                @Html.TextBox("accountcreatedmu", null, new { @class = "textbox-for-sched", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4">
+                <br />
+                <button id="btnCreateAccount" class="btn btn-primary" style="width: 250px;">Create Account</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="label-for-sched">Username</h5>
+                @Html.TextBox("usernamemu", null, new { @class = "textbox-for-sched", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4" style="color: whitesmoke;">
+                <h5 class="label-for-sched">Password</h5>
+                @Html.Password("passwordmu", null, new { @class = "textbox-for-sched", @readonly = "readonly" }) <br />
+                <label style="font-weight: normal; font-size: 14px; cursor: pointer;" class="noselect"><input type="checkbox" onchange="document.getElementById('passwordmu').type = this.checked ? 'text' : 'password'"> Show password</label>
+            </div>
+            <div class="col-md-4">
+                <button id="btnDeleteAccount" class="btn btn-danger" style="width: 250px;">Delete</button>
+                <button style="visibility: hidden;" id="btnReloadAccount" class="btn btn-danger">Reload</button>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-hover es-table" id="account-table">
+                <thead>
+                    <tr>
+                        <th>
+                            <!-- btn -->
+                        </th>
+                        <th>
+                            <!-- hidden -->
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AccountID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AccountCreated)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LastLogin)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="account-partial"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

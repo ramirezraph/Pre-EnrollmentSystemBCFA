@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+<div class="view-section">
+    <div class="dashboard-container" style="height: auto;">
+        <div class="dashboard-top">
+            <h2>Welcome to BCFA Enrollment Management System</h2>
+        </div>
+        <div class="dashboard-header">
+            <img id="img-header" src="~/Content/Images/School.jpg" />
+        </div>
+        <div class="dashboard-title">
+            <h3>@ViewBag.Title</h3>
+        </div>
+        <div style="background-color: rgb(13,13,13); width: 100%; height: 50px; margin: 0 auto; padding-left: 1.75%;">
+            <div class="row" style="margin-top: 1%;">
+                <div class="col-md-6">
+                    <h6 style="font-size: 17px; font-family: Tahoma; margin-left: 5%;">Academic Year: <label id="schoolyearhome">None</label> </h6>
+                </div>
+                <div class="col-md-6">
+                    <h6 style="font-size: 17px; font-family: Tahoma; margin-left: 5%;">Date Today: <label>@DateTime.Now.ToShortDateString()</label> </h6>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin: 0; padding: 0; padding-top: 3%;">
+            <div class="col-md-4" style="text-align: center;">
+                <img src="~/Content/Icons/chart_icon64Blue.png" width="80" height="80" style="margin-bottom: 3%;" /><br />
+                <label style="color: lightgray;">Enrolled Student:</label>
+                <label style="font-size: 35px; color: rgb(41,128,185);"><span id="studentenrolledcount"></span></label>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <img src="~/Content/Icons/teacher_icon64.png" width="80" height="80" style="margin-bottom: 3%;" /><br />
+                <label style="color: lightgray;">Teachers:</label>
+                <label style="font-size: 35px; color: rgb(145,93,25);"><span id="teachercount"></span></label>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <img src="~/Content/Icons/class_icon64.png" width="80" height="80" style="margin-bottom: 3%;" /><br />
+                <label style="color: lightgray;">Sections:</label>
+                <label style="font-size: 35px; color: rgb(192,57,43);"><span id="sectioncount"></span></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <br />
+    <br />
+</div>

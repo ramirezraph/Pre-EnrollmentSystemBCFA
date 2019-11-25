@@ -1,0 +1,223 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: rgb(28,28,28);
+    overflow-x: hidden;
+}
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: left;
+}
+
+.main-content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 100px;
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/* Account Info CSS */
+
+.AccountName {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    text-align: right;
+    color: rgb(222,184,135);
+}
+.AccountUsername {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    text-align: right;
+}
+.account-info {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    padding-top: 6%;
+}
+#user-icon {
+    width: 38px;
+    height: 38px;
+}
+#dropdownaccount {
+    cursor: grab;
+}
+.textbox-account {
+    border: 1px solid gray;
+    width: 200px;
+    color: black;
+    padding-left: 2%;
+    height: 30px;
+}
+.textbox-account-noborder {
+    width: 200px;
+    color: black;
+    padding-left: 2%;
+    height: 30px;
+}
+/* Sidebar CSS */
+#sidebar-wrapper {
+    color: whitesmoke;
+    z-index: 1;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    overflow-y: hidden;
+    background-color: rgb(15, 15, 15);
+    transition: all 0.4s ease-in-out;
+}
+.sidebar-top {
+    width: 80%;
+    background-color:rgb(15,15,15);
+    margin: 0 auto;
+}
+.sidebar-top h5 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 15%;
+}
+.sidebar-top h4 {
+    font-size: 23px;
+    margin-left: 15%;
+}
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 50px;
+    font-size: 15px;
+    
+}
+.sidebar-nav li a {
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding-left: 7%;
+    
+}
+.sidebar-nav li a:hover {
+    background-color: rgb(54,0,0);
+}
+.sidebar-nav li img {
+    width: 32px;
+    height: 32px;
+}
+/* Main Content */
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    padding-left: 250px;
+    transition: all 0.4s ease-in-out;
+    background-color: rgb(28,28,28);
+    color: whitesmoke;
+}
+
+/* Change the width of the sidebar to display it */
+#wrapper.menuDisplayed #sidebar-wrapper {
+    width: 50px;
+    transition: all 0.4s ease-in;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper {
+    padding-left: 50px;
+    transition: all 0.4s ease-in;
+}
+
+#wrapper.menuDisplayed .sidebar-nav .hideToggle {
+    display: none;
+    transition: opacity 0.1s ease-in-out;
+}
+#wrapper.menuDisplayed .sidebar-top .hideToggle {
+    display: none;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.sidebar-nav li a img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5%;
+}
+
+/* body content (right section)*/
+.body-content {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+}
+
+/* Toggle button style */
+#menu-toggle {
+    margin-left: -1.2%;
+    padding: 5px;
+    background-color: rgb(21,21,21);
+    text-decoration: none;
+    text-align: right;
+
+}
+.view-section {
+    margin: -1% auto;
+    width: 90%;
+    height: auto;
+    background-color: rgb(21,21,21);
+    padding-bottom: 20px;
+}
+
+.DropDownMenu {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@media (min-width: 1024px) and (max-width:1366px) {
+    #sidebar-wrapper {
+        color: whitesmoke;
+        z-index: 1;
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        overflow-y: hidden;
+        background-color: rgb(15, 15, 15);
+        transition: all 0.4s ease-in-out;
+        margin-top: -2%;
+    }
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

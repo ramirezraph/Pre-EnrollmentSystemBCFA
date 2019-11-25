@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBcfaSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastLogin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AccountCreated" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SubjectList">
+    <Key>
+      <PropertyRef Name="SubjectCode" />
+    </Key>
+    <Property Name="SubjectCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubjectType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubjectTeacher" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="dbBcfaSystemEntitiesData" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="dbBcfaSystemModel.Account" />
+    <EntitySet Name="SubjectLists" EntityType="dbBcfaSystemModel.SubjectList" />
+    <EntitySet Name="Teachers" EntityType="dbBcfaSystemModel.Teacher" />
+    <EntitySet Name="tblStudentInformations" EntityType="dbBcfaSystemModel.tblStudentInformation" />
+    <EntitySet Name="tblSchoolYears" EntityType="dbBcfaSystemModel.tblSchoolYear" />
+    <EntitySet Name="tblEnrollments" EntityType="dbBcfaSystemModel.tblEnrollment" />
+    <EntitySet Name="tblRequirements" EntityType="dbBcfaSystemModel.tblRequirement" />
+    <EntitySet Name="tblSchedules" EntityType="dbBcfaSystemModel.tblSchedule" />
+    <EntitySet Name="tblSections" EntityType="dbBcfaSystemModel.tblSection" />
+  </EntityContainer>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="Int32" Nullable="false" />
+    <Property Name="TeacherAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TeacherContact" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TeacherName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblStudentInformation">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="StType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StLastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="StFirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="StMiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="StAge" Type="Int32" />
+    <Property Name="StDateOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StPlaceOfBirth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StContact" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="StGender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="StMaritalStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StCitizenship" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StReligion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StFatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StFatherOccupation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="StMotherName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StMotherOccupation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="StParentAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StElemSchool" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StElemAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StHighSchool" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StHighAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblSchoolYear">
+    <Key>
+      <PropertyRef Name="SchoolYear" />
+    </Key>
+    <Property Name="SchoolYear" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblEnrollment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AcademicYear" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EnrollmentID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StudentID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameOfStudent" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StudentType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GradeLevel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Section" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DateEnrolled" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblRequirement">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Form137" Type="Boolean" Nullable="false" />
+    <Property Name="NSO" Type="Boolean" Nullable="false" />
+    <Property Name="GoodMoral" Type="Boolean" Nullable="false" />
+    <Property Name="GradeCard" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSchedule">
+    <Key>
+      <PropertyRef Name="SchedID" />
+    </Key>
+    <Property Name="SchedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AcademicYear" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GradeLevel" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Section" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adviser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubjectCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DescriptiveTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Monday" Type="Boolean" Nullable="false" />
+    <Property Name="Tuesday" Type="Boolean" Nullable="false" />
+    <Property Name="Wednesday" Type="Boolean" Nullable="false" />
+    <Property Name="Thursday" Type="Boolean" Nullable="false" />
+    <Property Name="Friday" Type="Boolean" Nullable="false" />
+    <Property Name="Saturday" Type="Boolean" Nullable="false" />
+    <Property Name="Day" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Time" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TimeFrom" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TimeTo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TeacherID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblSection">
+    <Key>
+      <PropertyRef Name="SectionName" />
+    </Key>
+    <Property Name="SType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SectionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GradeLevel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SectionName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SectionAdviser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

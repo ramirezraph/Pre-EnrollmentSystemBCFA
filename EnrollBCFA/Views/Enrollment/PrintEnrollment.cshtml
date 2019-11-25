@@ -1,0 +1,153 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblSchedule>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Enrollment Form</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        *{
+            color: rgb(21,21,21);
+
+        }
+        .label-for-print {
+            margin-left: 4%;
+            font-weight: normal;
+        }
+        *:focus {
+            outline: none;
+        }
+        .textbox-for-printen {
+            border: 0 solid;
+        }
+        #printschoolyear {
+            width: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <br />
+        <div class="row" style="margin: 0 auto; text-align: center;">
+            <img src="~/Content/Icons/bcfa_logo.png" width="100" height="100" />
+            <h3 style="color: rgb(176,0,0);">Baliuag Cross and Flame Academy</h3>
+            <h4>@Html.TextBox("printschoolyear", null, new { @class = "textbox-for-printen", @readonly = "readonly" })</h4>
+            <h4 style="font-size: 16px; font-weight: bold; letter-spacing: 1.2px;">@ViewBag.DateNow</h4>
+        </div>
+        <hr style="margin-top: 0.5%;" />
+        <div class="print-container" style="padding-left: 10%;">
+            <div class="row" style="text-align: left">
+                <div class="col-xs-2">
+                    <label>Enrollment ID:</label>
+                </div>
+                <div class="col-xs-4">
+                    @Html.TextBox("printenrollmentid", null, new { @class = "textbox-for-printen", @readonly = "readonly" })
+                </div>
+                <div class="col-xs-2">
+                    <label>Student ID:</label>
+                </div>
+                <div class="col-xs-4">
+                    @Html.TextBox("studentidprint", null, new { @class = "textbox-for-printen", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="row" style="text-align: left">
+                <div class="col-xs-2">
+                    <label>Name:</label>
+                </div>
+                <div class="col-xs-4">
+                    @Html.TextBox("printstudentname", null, new { @class = "textbox-for-printen", @readonly = "readonly" })
+                </div>
+                <div class="col-xs-2">
+                    <label>Type:</label>
+                </div>
+                <div class="col-xs-4">
+                    @Html.TextBox("printstudenttype", null, new { @class = "textbox-for-printen", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="row" style="text-align: left">
+                <div class="col-xs-2">
+                    <label>Grade Level:</label>
+                </div>
+                <div class="col-xs-4">
+                    @Html.TextBox("printstudentlevel", null, new { @class = "textbox-for-printen", @readonly = "readonly" })
+                </div>
+                <div class="col-xs-2">
+                    <label>Section:</label>
+                </div>
+                <div class="col-xs-4">
+                    @Html.TextBox("printstudentsection", null, new { @class = "textbox-for-printen", @readonly = "readonly" })
+                </div>
+            </div>
+            <hr />
+            <br />
+            <div class="row" style="text-align: left">
+                <label style="color: rgb(222,184,135);">Subjects & Schedules</label>
+            </div>
+            <div class="body-section">
+                <table class="table enroll-table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SubjectCode)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DescriptiveTitle)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Time)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Day)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Teacher)
+                        </th>
+                    </tr>
+                    <tbody id="TableEnrollDivPrint">
+                        <!-- partial -->
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript">
+         function tableLoad(section) {
+             $.ajax({
+                 url: '/Enrollment/LoadSchedPrint',
+                 data: { "section": section },
+                 type: "Get",
+                 dataType: "html",
+                 success: function (data) {
+                     $("#TableEnrollDivPrint").html(data);
+                 }
+             });
+         }
+    </script>
+    <!-- Frameworks/Lib -->
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/jquery.printPage.js"></script>
+
+    <script type="text/javascript">
+        $("#printschoolyear").val("A.Y " + localStorage["academicyear"]);
+        $("#printenrollmentid").val(localStorage["enrollmentid"]);
+        $("#studentidprint").val(localStorage["studentid"]);
+        $("#printstudentname").val(localStorage["nameofstudent"]);
+        $("#printstudenttype").val(localStorage["studenttype"]);
+        $("#printstudentlevel").val(localStorage["gradelevel"]);
+        $("#printstudentsection").val(localStorage["section"]);
+        var section = localStorage["section"];
+        tableLoad(section);
+    </script>
+   
+
+</body>
+</html>
+    

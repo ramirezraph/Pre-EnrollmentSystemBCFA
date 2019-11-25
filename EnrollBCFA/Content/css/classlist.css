@@ -1,0 +1,64 @@
+﻿.class-header {
+    width: 93%;
+    height: 40px;
+    background-color: #ecf0f1;
+    color: rgb(36,36,36);
+    margin: 0 auto;
+}
+
+.class-container {
+    color: lightgray;
+}
+
+#lblClass {
+    position: relative;
+    left: 3%;
+    top: 15%;
+}
+
+.class-container {
+    width: 93%;
+    height: auto;
+    color: rgb(21,21,21);
+    background-color: rgb(21,21,21);
+    margin: 0 auto;
+}
+
+.class-table-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.class-table {
+    background-color: #ecf0f1;
+    height: auto;
+    width: 98%;
+    margin-top: 2%;
+    padding: 0;
+}
+
+.class-table tr th {
+    color: indianred;
+    background-color: #ecf0f1;
+}
+
+.table-hover tr:hover td, .table-hover tr:hover {
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.form-horizontal {
+    color: whitesmoke;
+}
+
+
+.dl-horizontal dt {
+    color: rgb(222,184,135);
+}
+.combobox-for-class {
+    padding-left: 5%;
+    color: rgb(21,21,21);
+    height: 30px;
+    width: 250px;
+}

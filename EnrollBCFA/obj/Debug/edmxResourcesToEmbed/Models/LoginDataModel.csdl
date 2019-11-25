@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBcfaSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblAccount">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastLogin" Type="DateTime" Precision="3" />
+    <Property Name="AccountCreated" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="dbBcfaSystemEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAccounts" EntityType="Self.tblAccount" />
+  </EntityContainer>
+</Schema>

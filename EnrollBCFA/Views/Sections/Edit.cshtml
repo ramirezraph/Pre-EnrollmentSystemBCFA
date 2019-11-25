@@ -1,0 +1,80 @@
+﻿@model EnrollBCFA.Models.tblSection
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="view-section">
+    <div class="section-header">
+        <h3 id="lblSection">Edit Section's Information</h3>
+    </div>
+    <div class="section-container">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.SType)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SectionName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SectionName, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.SectionName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SType, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.SType, new List<SelectListItem>
+                        {
+                            new SelectListItem { Text = "Elementary", Value="Elementary" },
+                            new SelectListItem { Text = "High School", Value="High School" }
+                        }, "- select type -", new { @class = "DropDownMenu", @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.SType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GradeLevel, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.GradeLevel, new List<SelectListItem>
+                        {
+                            new SelectListItem { Text = "Grade-1", Value="Grade-1" },
+                            new SelectListItem { Text = "Grade-2", Value="Grade-2" },
+                            new SelectListItem { Text = "Grade-3", Value="Grade-3" },
+                            new SelectListItem { Text = "Grade-4", Value="Grade-4" },
+                            new SelectListItem { Text = "Grade-5", Value="Grade-5" },
+                            new SelectListItem { Text = "Grade-6", Value="Grade-6" },
+                            new SelectListItem { Text = "Grade-7", Value="Grade-7" },
+                            new SelectListItem { Text = "Grade-8", Value="Grade-8" },
+                            new SelectListItem { Text = "Grade-9", Value="Grade-9" },
+                            new SelectListItem { Text = "Grade-10", Value="Grade-10" },
+                        }, "- select level -", new { @class = "DropDownMenu" })
+                        @Html.ValidationMessageFor(model => model.GradeLevel, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SectionAdviser, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.SectionAdviser, null, null, new { @class = "DropDownMenu" })
+                        @Html.ValidationMessageFor(model => model.SectionAdviser, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-success btnSaveEditSection" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            <a href="@Url.Action("Index", "Sections")" class="btnBackToList">&#8592; Back to list</a>
+        </div>
+    </div>
+</div>
+

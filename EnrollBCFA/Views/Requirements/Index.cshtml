@@ -1,0 +1,97 @@
+﻿
+@model IEnumerable<EnrollBCFA.Models.tblRequirement>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="view-section">
+    <!-- edit success -->
+    <div class="modal fade" id="modalReqSuccess" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Success.</h4>
+                </div>
+                <div class="modal-body">
+                    <p>The changes have been saved.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="req-header">
+        <h3 id="lblReq">Requirements</h3>
+    </div>
+    <div class="req-container" style="margin-left: 1.5%; color: whitesmoke;">
+
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <a href="@Url.Action("Index", "tblStudentInformations")" class="btn btn-primary" style="margin-bottom: 1%; margin-left: -5%; width: 200px;">Register Student</a>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-hover table-striped req-table">
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Form137)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NSO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GoodMoral)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GradeCard)
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+                <tbody style="color: rgb(21,21,21);">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.HiddenFor(model => item.StudentID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.Name)
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(model => item.Form137, new { @id = "Form137"+item.StudentID })
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(model => item.NSO, new { @id = "NSO" + item.StudentID })
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(model => item.GoodMoral, new { @id = "GoodMoral" + item.StudentID })
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(model => item.GradeCard, new { @id = "GradeCard" + item.StudentID })
+                            </td>
+                            <td>
+                                <button id="btnSaveReq" class="btn btn-primary btnEditTeacher" onclick = "@String.Format("SaveRequirements('{0}', '{1}', '{2}', '{3}', '{4}')", item.StudentID, item.Form137, item.NSO, item.GoodMoral, item.GradeCard)" >Save</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+</div>

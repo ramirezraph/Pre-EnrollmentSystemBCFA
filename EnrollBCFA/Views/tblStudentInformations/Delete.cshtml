@@ -1,0 +1,218 @@
+﻿@model EnrollBCFA.Models.tblStudentInformation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="view-section">
+    <div class="student-header">
+        <h3 id="lblStudent">Delete Student Record</h3>
+    </div>
+    <div class="student-container" style="color: whitesmoke; width: 88%; margin: 0 auto;">
+        <br />
+        <div class="row">
+            <h3 class="text-danger">Are you sure you want to delete this?</h3>
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StudentID)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.StudentID)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StType)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StType)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StLastName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StLastName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StFirstName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StFirstName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StMiddleName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StMiddleName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StAge)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StAge)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StDateOfBirth)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StDateOfBirth)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StPlaceOfBirth)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StPlaceOfBirth)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StContact)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StContact)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StGender)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StGender)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StMaritalStatus)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StMaritalStatus)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StCitizenship)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StCitizenship)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StReligion)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StReligion)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StAddress)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StAddress)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StFatherName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StFatherName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StFatherOccupation)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StFatherOccupation)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StMotherName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StMotherName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StMotherOccupation)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StMotherOccupation)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StParentAddress)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StParentAddress)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StElemSchool)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StElemSchool)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StElemAddress)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StElemAddress)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StHighSchool)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StHighSchool)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StHighAddress)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.StHighAddress)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-danger" style="width: 150px;" /> |
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

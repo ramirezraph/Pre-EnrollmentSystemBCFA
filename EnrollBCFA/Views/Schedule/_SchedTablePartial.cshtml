@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblSchedule>
+
+<table class="table table-hover sched-table">
+    <tr>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptiveTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradeLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Section)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <button class="btn btn-success" onclick="SelectSchedule(@item.SchedID)">Select</button>
+            </td>
+            <td>
+                @Html.HiddenFor(modelItem => item.SchedID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescriptiveTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)    
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Section)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teacher)
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,364 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblSchedule>
+
+@{
+    ViewBag.Title = "Scheduling";
+}
+
+<div class="sched-section">
+    <div class="sched-header">
+        <h3 id="lblSched">Schedules</h3>
+    </div>
+    <div class="sched-container" style="color: whitesmoke;">
+        <!-- load failed -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Load failed.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please select the section you want to load.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- create warning-->
+        <div class="modal fade" id="myModalCreateConfirm" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Confirm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Are you sure you want to create schedule?</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmCreate" style="width: 150px;">Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 150px;">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- create success -->
+        <div class="modal fade" id="myModalCreateSuccess" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Success</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>The schedule has been created successfully</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" style="width: 150px;">Ok</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- create error message -->
+        <div class="modal fade" id="myModalCreateDuplicate" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Create Failed</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>The subject in this section is already been used.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" style="width: 150px;">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- create error -->
+        <div class="modal fade" id="myModalCreateError" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Create Failed</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please fil out the form completely.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- delete warning-->
+        <div class="modal fade" id="myModalDelete" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Delete Schedule</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Are you sure you want to delete?</h5>
+                        <h5><strong>NOTE:</strong> You cannot recover it once deleted.</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmDelete" style="width: 150px;">Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 150px;">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <!-- delete error-->
+        <div class="modal fade" id="myModalDeleteError" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Delete Failed</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please select a schedule that you want delete.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- delete success-->
+        <div class="modal fade" id="myModalDeleteSuccess" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Delete Success</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>The schedule has been deleted successfully</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- update warning-->
+        <div class="modal fade" id="myModalUpdate" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Edit Schedule</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Are you sure you want to edit?</h5>
+                        <h5><strong>NOTE:</strong> This action cannot be undone.</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmUpdate" style="width: 150px;">Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 150px;">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- update error-->
+        <div class="modal fade" id="myModalUpdateError" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Update Failed</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please fill out the form completely.</p>
+                        <p><strong>NOTE:</strong> Make sure that you select the row you want to edit.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- update success-->
+        <div class="modal fade" id="myModalUpdateSuccess" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Update Success</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>The schedule has been updated successfully</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Academic Year</h5>
+                        @Html.TextBox("academicyear", null, new { @class = "textbox-for-sched", @readonly = "readonly"})
+
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Adviser</h5>
+                        @Html.TextBox("sectionadviser", null, new { @class = "textbox-for-sched", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Type</h5>
+                        @Html.DropDownList("vartype", null, "- select type -", new { @class = "combobox-for-sched" })
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Subject Code</h5>
+                        @Html.DropDownList("subjectcode", null, null, new { @class = "combobox-for-sched" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Grade Level</h5>
+                        @Html.DropDownList("varlevel", null, "- select level -", new { @class = "combobox-for-sched" })
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Descriptive Title</h5>
+                        @Html.TextBox("descriptivetitle", null, new { @class = "textbox-for-sched" })
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Section</h5>
+                        @Html.DropDownList("varsection", null, "- select section -", new { @class = "combobox-for-sched" })
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Teacher Name</h5>
+                        @Html.DropDownList("teachername", null, null, new { @class = "combobox-for-sched" })
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="button" id="btnLoadDataSched" value="Load Data" class="btn btn-primary" style="margin-top: 5%; width: 250px;" />
+                        <input type="button" id="btnResetSched" value="Reset" class="btn btn-success" style="margin-top: 3%; width: 250px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="label-for-sched">Teacher ID</h5>
+                        @Html.DropDownList("teacherid", null, null, new { @class = "combobox-for-sched" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Days / Checkboxes -->
+                <h5 class="label-for-sched" style="margin-left: 8%;">Day(s)</h5>
+                <div class="row" style="margin-left: 5%;">
+                    <div class="col-md-2">
+                        <input id="cbmonday" type="checkbox" value="false" style="width: 17px; height: 17px;" />
+                        <label style="font-size: 17.5px;">M</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input id="cbtuesday" type="checkbox" value="false" style="width: 17px; height: 17px;" />
+                        <label style="font-size: 17.5px;">T</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input id="cbwednesday" type="checkbox" value="false" style="width: 17px; height: 17px;" />
+                        <label style="font-size: 17.5px;">W</label>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 5%; margin-top: 2%;">
+                    <div class="col-md-2">
+                        <input id="cbthursday" type="checkbox" value="false" style="width: 17px; height: 17px;" />
+                        <label style="font-size: 17.5px;">Th</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input id="cbfriday" type="checkbox" value="false" style="width: 17px; height: 17px;" />
+                        <label style="font-size: 17.5px;">F</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input id="cbsaturday" type="checkbox" value="false" style="width: 17px; height: 17px;" />
+                        <label style="font-size: 17.5px;">S</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="label-for-sched" style="margin-left: 10%; font-size: 20px;">Time</h5><br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                <label style="margin-left: 10%;" class="label-for-sched">From</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input id="timefrom" type="text" name="timeFrom" value="" style="margin-left: -25%; width: 70px; height: 25px; padding-left: 5%; color: black;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br />
+                            <div class="col-md-2">
+                                <label style="margin-left: 10%;" class="label-for-sched">To</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input id="timeto" type="text" name="timeTo" value="" style="margin-left: -25%; width: 70px; height: 25px; padding-left: 5%; color: black;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-3">
+                        <button id="btnCreateSched" class="btn btn-primary" style="width: 120%">Create</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button id="btnUpdateSched" class="btn btn-warning" style="width: 120%">Update</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button id="btnDeleteSched" class="btn btn-danger" style="width: 120%">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row" style="color: rgb(21,21,21);">
+            <div id="TableSchedDiv">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

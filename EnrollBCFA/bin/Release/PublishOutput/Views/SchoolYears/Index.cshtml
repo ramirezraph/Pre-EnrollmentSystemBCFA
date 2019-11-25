@@ -1,0 +1,49 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblSchoolYear>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="view-section">
+    <div class="acad-header">
+        <h3 id="lblAcad">Academic Year</h3>
+    </div>
+    <div class="acad-container">
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <a href="@Url.Action("Create", "SchoolYears")" class="btn btn-primary btnAddSubject">Add New</a>
+            </div>
+        </div>
+        <table class="table table-hover table-striped acad-table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SchoolYear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.status)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SchoolYear)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.status)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "SchoolYears", new { id = item.SchoolYear })" class="btn btn-warning btnEditAcad">Edit</a>
+                        <a href="@Url.Action("Delete", "SchoolYears", new { id = item.SchoolYear })" class="btn btn-danger btnDeleteAcad">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>
+

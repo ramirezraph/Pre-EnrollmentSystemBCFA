@@ -1,0 +1,383 @@
+﻿
+@{
+    if (Session["AccountID"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BCFA</title>
+     @Styles.Render("~/Content/css/css")
+</head>
+<body>
+    <div class="navbar-bcfa">
+    <!-- edit success -->
+    <div class="modal fade" id="modalAccountSuccess" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Success.</h4>
+                </div>
+                <div class="modal-body">
+                    <p>The changes have been saved.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="savecompleteclose" type="button" class="btn btn-default">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for password -->
+    <div class="modal fade" id="modalChangePassword" role="dialog">
+        <div class="modal-dialog modal-md">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Change Password</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        @{
+                            try
+                            {
+                                <div class="col-md-6">
+                                    <label>Account ID:</label><br />
+                                    @Html.TextBox("accountidcp", @Session["AccountID"].ToString(), new { @class = "textbox-account-noborder", @readonly = "readonly" })
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Username:</label><br />
+                                    @Html.TextBox("useraccountcp", @Session["Username"].ToString(), new { @class = "textbox-account-noborder", @readonly = "readonly" })
+                                </div>
+                            }
+                            catch (NullReferenceException)
+                            {
+                                if (!Response.IsRequestBeingRedirected)
+                                {
+                                    Response.Redirect("~/Login/Index");
+                                }
+                            }
+                        }
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Old Password:</label><br />
+                            @Html.Password("oldpassword", null, new { @class = "textbox-account" })
+                            <br />
+                            <label style="font-weight: normal; font-size: 14px; cursor: pointer;" class="noselect"><input type="checkbox" onchange="document.getElementById('oldpassword').type = this.checked ? 'text' : 'password'"> Show password</label>
+                        </div>
+                        <div class="col-md-6">
+                            <label>New Password:</label><br />
+                            @Html.Password("newpassword", null, new { @class = "textbox-account" })
+                            <br />
+                            <label style="font-weight: normal; font-size: 14px; cursor: pointer;" class="noselect"><input type="checkbox" onchange="document.getElementById('newpassword').type = this.checked ? 'text' : 'password'"> Show password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- blank -->
+                        </div>
+                        <div class="col-md-6">
+                            <label>Confirm Password:</label><br />
+                            @Html.Password("confirmpassword", null, new { @class = "textbox-account" })
+                            <br />
+                            <label style="font-weight: normal; font-size: 14px; cursor: pointer;" class="noselect"><input type="checkbox" onchange="document.getElementById('confirmpassword').type = this.checked ? 'text' : 'password'"> Show password</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="savechangespassword" type="button" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- modal for account  -->
+    <div class="modal fade" id="modalManageAccount" role="dialog">
+        <div class="modal-dialog modal-md">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">My Account</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        @{
+                            try
+                            {
+                                <div class="col-md-6">
+                                    <label>Account ID:</label><br />
+                                    @Html.TextBox("accountid", @Session["AccountID"].ToString(), new { @class = "textbox-account-noborder", @readonly = "readonly" })
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Account Created:</label><br />
+                                    @Html.TextBox("accountcreated", @Session["AccountCreated"].ToString(), new { @class = "textbox-account-noborder", @readonly = "readonly" })
+                                </div>
+                            }
+                            catch (NullReferenceException)
+                            {
+                                if (!Response.IsRequestBeingRedirected)
+                                {
+                                    Response.Redirect("~/Login/Index");
+                                }
+                            }
+                        }
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Last Name:</label><br />
+                            @{
+                                try
+                                {
+                                    @Html.TextBox("lnameaccount", @Session["LastName"].ToString(), new { @class = "textbox-account" })
+                                }
+                                catch (NullReferenceException)
+                                {
+                                    if (!Response.IsRequestBeingRedirected)
+                                    {
+                                        Response.Redirect("~/Login/Index");
+                                    }
+                                }
+                            }
+                        </div>
+                        <div class="col-md-6">
+                            <label>Username:</label><br />
+                            @{
+                                try
+                                {
+                                    @Html.TextBox("useraccount", @Session["Username"].ToString(), new { @class = "textbox-account" })
+                                }
+                                catch (NullReferenceException)
+                                {
+                                    if (!Response.IsRequestBeingRedirected)
+                                    {
+                                        Response.Redirect("~/Login/Index");
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>First Name:</label><br />
+                            @{
+                                try
+                                {
+                                    @Html.TextBox("fnameaccount", @Session["FirstName"].ToString(), new { @class = "textbox-account" })
+                                }
+                                catch (NullReferenceException)
+                                {
+                                    if (!Response.IsRequestBeingRedirected)
+                                    {
+                                        Response.Redirect("~/Login/Index");
+                                    }
+                                }
+                            }
+                        </div>
+                        <div class="col-md-6">
+                            <label>Password:</label><br />
+                            @{
+                                try
+                                {
+                                    @Html.Password("passaccount", @Session["Password"].ToString(), new { @class = "textbox-account-noborder", @readonly = "readonly" })
+                                }
+                                catch (NullReferenceException)
+                                {
+                                    if (!Response.IsRequestBeingRedirected)
+                                    {
+                                        Response.Redirect("~/Login/Index");
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="changepassword" type="button" class="btn btn-danger" data-dismiss="modal">Change Password</button>
+                    <button id="savechangesaccount" type="button" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- edit failed -->
+    <div class="modal fade" id="modalAccountFailed1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Failed.</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your password was incorrect.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- edit failed -->
+    <div class="modal fade" id="modalAccountFailed2" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Failed.</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Passwords do not match.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- edit failed -->
+    <div class="modal fade" id="modalAccountFailed3" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Failed.</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Password is too short.</p>
+                    <p>Your password should contain 4 or more character.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav>
+        <br />
+        <div class="row">
+            <div class="col-lg-1" id="bcfa-logo">
+                <img src="@Url.Content("~/Content/Icons/bcfa_logo.png")" alt="Alternate Text" />
+            </div>
+            <div class="col-lg-7" id="bcfa-schName">
+                <h1 id="bcfa-brand">Baliuag Cross and Flame Academy</h1>
+                <h2 id="bcfa-address">B.S Aquino Ave, Bagong Nayon, Baliwag, Bulacan</h2>
+            </div>
+            <div class="col-lg-3" id="bcfa-rightHead">
+                <div class="row account-info">
+                    <div class="col-lg-7" style="margin-right: -7%">
+                        @if (Session["AccountID"] != null)
+                        {
+                            <h5 class="AccountName">@Session["FirstName"].ToString() @Session["LastName"].ToString()</h5>
+                            <h6 class="AccountUsername">@Session["Username"].ToString()</h6>
+                        }
+                        else
+                        {
+                            if (!Response.IsRequestBeingRedirected)
+                            {
+                                Response.Redirect("~/Login/Index");
+                            }
+                        }
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="@Url.Content("~/Content/Icons/user_icon64.png")" alt="Alternate Text"  id="user-icon" />
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="dropdown" style="margin-top: 30%;">
+                            <label style="font-size: 14px; cursor:pointer;" class="dropdown-toggle" data-toggle="dropdown">
+                                Profile&#9660;
+                            </label>
+                            <ul class="dropdown-menu">
+                                <li><a id="manage-account" style="cursor: pointer;">Manage Account</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+    <div class="container-fluid main-content">
+        <div id="wrapper">
+            <!-- sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li style="visibility: hidden;"><a href="#" class="btn" id="menu-toggle"><img src="@Url.Content("~/Content/Icons/menu_icon32.png")" alt="menu-icon"></a></li>
+                    <li class="hideToggle"><a href="@Url.Action("Index", "Bcfa")"><img src="@Url.Content("~/Content/Icons/dashboard_icon32.png")" alt="menu-icon">Dashboard</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("Enrollment", "Bcfa")"><img src="@Url.Content("~/Content/Icons/student_icon32.png")" alt="menu-icon">Enrollment</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("EnrolledStudent", "Bcfa")"><img src="@Url.Content("~/Content/Icons/grade_icon32.png")" alt="menu-icon">Enrolled Student List</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("Scheduling", "Bcfa")"><img src="@Url.Content("~/Content/Icons/schedule_icon32.png")" alt="menu-icon">Scheduling</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("Student", "Bcfa")"><img src="@Url.Content("~/Content/Icons/info_icon32.png")" alt="menu-icon">Student</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("ClassList", "Bcfa")"><img src="@Url.Content("~/Content/Icons/class_icon32.png")" alt="menu-icon">Class List</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("Teacher", "Bcfa")"><img src="@Url.Content("~/Content/Icons/teacher_icon32.png")" alt="menu-icon">Teachers</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("Section", "Bcfa")"><img src="@Url.Content("~/Content/Icons/teacher_icon32.png")" alt="menu-icon">Sections</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("Subjects", "Bcfa")"><img src="@Url.Content("~/Content/Icons/subject_icon32.png")" alt="menu-icon">Subjects</a></li>
+                    <li class="hideToggle"><a href="@Url.Action("SchoolYear", "Bcfa")"><img src="@Url.Content("~/Content/Icons/subject_icon32.png")" alt="menu-icon">Academic Year</a></li>
+                    <li id="btnmngaccount" style="visibility: hidden;" class="hideToggle"><a href="@Url.Action("ManageUser", "Bcfa")"><img src="@Url.Content("~/Content/Icons/subject_icon32.png")" alt="menu-icon">Manage Users</a></li>
+                </ul>
+            </div>
+            
+            <!-- main content -->
+            <div>
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row body-content">
+                            <div class="col-lg-12">
+                                <!-- Return the views of BcfaController -->
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+  
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    <!-- Frameworks/Lib -->
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <!-- Custom JS -->
+    <script src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/autocompleteCB.js"></script>
+    
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed");
+        });
+    </script>
+</body>
+</html>

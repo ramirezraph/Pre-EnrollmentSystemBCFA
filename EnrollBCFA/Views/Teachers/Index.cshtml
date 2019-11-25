@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EnrollBCFA.Models.Teacher>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="view-section">
+    <div class="teacher-header">
+        <h3 id="lblTeacher">Teacher List</h3>
+    </div>
+    <div class="teacher-container">
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <a href="@Url.Action("Create", "Teachers")" class="btn btn-primary btnAddSubject">Add New Teacher</a>
+            </div>
+        </div>
+        <table class="table table-hover table-striped teacher-table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeacherID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeacherName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeacherAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeacherContact)
+                </th>
+                <th></th>
+            </tr>
+            <tbody>
+                @foreach (var teacherItem in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => teacherItem.TeacherID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => teacherItem.TeacherName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => teacherItem.TeacherAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => teacherItem.TeacherContact)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Teachers", new { id = teacherItem.TeacherID })" class="btn btn-warning btnEditTeacher">Edit</a>
+                            <a href="@Url.Action("Delete", "Teachers", new { id = teacherItem.TeacherID })" class="btn btn-danger btnDeleteTeacher">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+           
+
+        </table>
+    </div>
+</div>
+
+

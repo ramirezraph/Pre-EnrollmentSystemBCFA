@@ -1,0 +1,79 @@
+﻿.section-header {
+    width: 100%;
+    height: 40px;
+    background-color: #ecf0f1;
+    color: rgb(36,36,36);
+}
+
+.section-container {
+    color: lightgray;
+}
+
+#lblSection {
+    position: relative;
+    left: 3%;
+    top: 15%;
+}
+
+.section-label {
+    font-weight: normal;
+    font-size: 15px;
+    margin-left: 10%;
+    color: lightgray;
+}
+
+.btnAddSection {
+    width: 150px;
+}
+
+.btnEditSection {
+    padding: 1px 10px 1px 10px;
+}
+
+.btnDeleteSection {
+    padding: 1px 10px 1px 10px;
+}
+
+.btnBackToList {
+    margin-left: 5%;
+}
+
+.btnSaveEditSection {
+    width: 150px;
+}
+
+.section-container {
+    width: 100%;
+    height: auto;
+    color: rgb(21,21,21);
+}
+
+.section-table-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section-table {
+    background-color: #ecf0f1;
+    height: auto;
+}
+
+    .section-table tr th {
+        color: indianred;
+        background-color: #ecf0f1;
+    }
+
+.table-hover tr:hover td, .table-hover tr:hover {
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.form-horizontal {
+    color: whitesmoke;
+}
+
+
+.dl-horizontal dt {
+    color: rgb(222,184,135);
+}

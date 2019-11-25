@@ -1,0 +1,139 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblEnrollment>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="view-section">
+    <div class="es-header">
+        <h3 id="lblEs">Enrolled Student List</h3>
+    </div>
+    <div class="es-container">
+        <br />
+        <!-- drop failed -->
+        <div class="modal fade" id="myModalDropFail" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Error.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please select the student you want to drop.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- drop success -->
+        <div class="modal fade" id="myModalDropSuccess" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Success</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>The student dropped successfully.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- drop warning-->
+        <div class="modal fade" id="myModalDropConfirm" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Confirm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Are you sure you want to drop this student?</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmDrop" style="width: 150px;">Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 150px;">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="@Url.Action("Index", "Enrollment")" class="btn btn-primary">Enrollment Module</a>
+                <button id="btnDropStudent" class="btn btn-danger">Drop Student</button>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        @Html.DropDownList("comboboxSearch", null, null, new { @class = "combobox-for-search txtSearchStudent" })
+                    </div>
+                    <div class="col-md-6">
+                        <button id="btnSearchEnrolled" class="btn btn-default">Search Student</button>
+                    </div>
+                </div>
+                <div class="row">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <br />
+            <div class="col-md-4">
+                <label class="enroll-label ">Student ID:</label>
+                @Html.TextBox("esstudentid", null, new { @class = "textbox-for-es-short", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4">
+                <label class="enroll-label ">Name:</label>
+                @Html.TextBox("esname", null, new { @class = "textbox-for-es-long", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4">
+                <h5>hello</h5>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-hover es-table" id="es-table">
+                <thead>
+                    <tr>
+                        <th>
+                        </th>
+                        <th>
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.StudentID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NameOfStudent)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.StudentType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GradeLevel)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Section)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DateEnrolled)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="es-partial"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

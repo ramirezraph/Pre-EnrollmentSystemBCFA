@@ -1,0 +1,105 @@
+﻿.student-header {
+    width: 100%;
+    height: 40px;
+    background-color: #ecf0f1;
+    color: rgb(36,36,36);
+}
+
+.acad-year {
+    color: whitesmoke;
+    margin-left: 3%;
+}
+
+.student-container {
+    color: lightgray;
+}
+.white-label {
+    color: whitesmoke;
+}
+.textbox-wide {
+    max-width: 450px;
+}
+#lblStudent {
+    position: relative;
+    left: 3%;
+    top: 15%;
+}
+.form-container {
+    padding-left: 5%;
+}
+.label-textbox {
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 5.5%;
+    margin-left: 15%;
+}
+.textbox-long, form-control {
+    width: 400px;
+}
+.search-textbox {
+    color: black; 
+    height: 20px; 
+    width: 300px; 
+    padding-left: 1%;
+    margin-left: 2%;
+}
+.student-label {
+    font-weight: normal;
+    font-size: 15px;
+    margin-left: 10%;
+    color: lightgray;
+}
+
+.btnAddTeacher {
+    width: 150px;
+}
+
+.btnEditTeacher {
+    padding: 1px 10px 1px 10px;
+}
+
+.btnDeleteTeacher {
+    padding: 1px 10px 1px 10px;
+}
+
+.btnBackToList {
+    margin-left: 5%;
+}
+
+.btnSaveEditTeacher {
+    width: 150px;
+}
+
+.student-container {
+    width: 100%;
+    height: auto;
+    color: rgb(21,21,21);
+}
+
+.student-table-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.student-table {
+    background-color: #ecf0f1;
+    height: auto;
+}
+
+.student-table tr th {
+    color: indianred;
+    background-color: #ecf0f1;
+ }
+.table-hover tr:hover td, .table-hover tr:hover {
+    background-color: rgb(245,245,245);
+    color: black;
+}
+
+.form-horizontal {
+    color: whitesmoke;
+}
+.dl-horizontal dt {
+    color: rgb(222,184,135);
+}
+

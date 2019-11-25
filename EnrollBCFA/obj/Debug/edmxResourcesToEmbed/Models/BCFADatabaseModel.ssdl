@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBcfaSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAccounts">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="LastLogin" Type="varchar" MaxLength="50" />
+    <Property Name="AccountCreated" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblEnrollment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcademicYear" Type="varchar" MaxLength="15" />
+    <Property Name="EnrollmentID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="StudentID" Type="varchar" MaxLength="50" />
+    <Property Name="NameOfStudent" Type="varchar" MaxLength="100" />
+    <Property Name="StudentType" Type="varchar" MaxLength="20" />
+    <Property Name="Status" Type="varchar" MaxLength="100" />
+    <Property Name="GradeLevel" Type="varchar" MaxLength="30" />
+    <Property Name="Section" Type="varchar" MaxLength="100" />
+    <Property Name="DateEnrolled" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblRequirements">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Form137" Type="bit" Nullable="false" />
+    <Property Name="NSO" Type="bit" Nullable="false" />
+    <Property Name="GoodMoral" Type="bit" Nullable="false" />
+    <Property Name="GradeCard" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSchedule">
+    <Key>
+      <PropertyRef Name="SchedID" />
+    </Key>
+    <Property Name="SchedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcademicYear" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="GradeLevel" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Section" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adviser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SubjectCode" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DescriptiveTitle" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Monday" Type="bit" Nullable="false" />
+    <Property Name="Tuesday" Type="bit" Nullable="false" />
+    <Property Name="Wednesday" Type="bit" Nullable="false" />
+    <Property Name="Thursday" Type="bit" Nullable="false" />
+    <Property Name="Friday" Type="bit" Nullable="false" />
+    <Property Name="Saturday" Type="bit" Nullable="false" />
+    <Property Name="Day" Type="varchar" MaxLength="20" />
+    <Property Name="Time" Type="varchar" MaxLength="30" />
+    <Property Name="TimeFrom" Type="varchar" MaxLength="10" />
+    <Property Name="TimeTo" Type="varchar" MaxLength="10" />
+    <Property Name="TeacherID" Type="varchar" MaxLength="30" />
+    <Property Name="Teacher" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSchoolYear">
+    <Key>
+      <PropertyRef Name="SchoolYear" />
+    </Key>
+    <Property Name="SchoolYear" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tblSection">
+    <Key>
+      <PropertyRef Name="SectionName" />
+    </Key>
+    <Property Name="SType" Type="varchar" MaxLength="30" />
+    <Property Name="SectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GradeLevel" Type="varchar" MaxLength="30" />
+    <Property Name="SectionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SectionAdviser" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblStudentInformation">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="StType" Type="varchar" MaxLength="20" />
+    <Property Name="StLastName" Type="varchar" MaxLength="30" />
+    <Property Name="StFirstName" Type="varchar" MaxLength="30" />
+    <Property Name="StMiddleName" Type="varchar" MaxLength="30" />
+    <Property Name="StAge" Type="int" />
+    <Property Name="StDateOfBirth" Type="varchar" MaxLength="50" />
+    <Property Name="StPlaceOfBirth" Type="text" />
+    <Property Name="StContact" Type="varchar" MaxLength="15" />
+    <Property Name="StGender" Type="varchar" MaxLength="10" />
+    <Property Name="StMaritalStatus" Type="varchar" MaxLength="20" />
+    <Property Name="StCitizenship" Type="varchar" MaxLength="20" />
+    <Property Name="StReligion" Type="varchar" MaxLength="20" />
+    <Property Name="StAddress" Type="text" />
+    <Property Name="StFatherName" Type="varchar" MaxLength="50" />
+    <Property Name="StFatherOccupation" Type="varchar" MaxLength="30" />
+    <Property Name="StMotherName" Type="varchar" MaxLength="50" />
+    <Property Name="StMotherOccupation" Type="varchar" MaxLength="30" />
+    <Property Name="StParentAddress" Type="text" />
+    <Property Name="StElemSchool" Type="text" />
+    <Property Name="StElemAddress" Type="text" />
+    <Property Name="StHighSchool" Type="text" />
+    <Property Name="StHighAddress" Type="text" />
+  </EntityType>
+  <EntityType Name="tblSubjectList">
+    <Key>
+      <PropertyRef Name="SubjectCode" />
+    </Key>
+    <Property Name="SubjectCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SubjectName" Type="varchar" MaxLength="50" />
+    <Property Name="SubjectType" Type="varchar" MaxLength="50" />
+    <Property Name="SubjectTeacher" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTeacher">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="int" Nullable="false" />
+    <Property Name="TeacherName" Type="varchar" MaxLength="50" />
+    <Property Name="TeacherContact" Type="varchar" MaxLength="15" />
+    <Property Name="TeacherAddress" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="dbBcfaSystemModelStoreContainer">
+    <EntitySet Name="tblAccounts" EntityType="Self.tblAccounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEnrollment" EntityType="Self.tblEnrollment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRequirements" EntityType="Self.tblRequirements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSchedule" EntityType="Self.tblSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSchoolYear" EntityType="Self.tblSchoolYear" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSection" EntityType="Self.tblSection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStudentInformation" EntityType="Self.tblStudentInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSubjectList" EntityType="Self.tblSubjectList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTeacher" EntityType="Self.tblTeacher" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

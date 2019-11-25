@@ -1,0 +1,42 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblSchedule>
+
+<table class="table table-hover enroll-table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptiveTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescriptiveTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teacher)
+            </td>
+        </tr>
+    }
+</table>

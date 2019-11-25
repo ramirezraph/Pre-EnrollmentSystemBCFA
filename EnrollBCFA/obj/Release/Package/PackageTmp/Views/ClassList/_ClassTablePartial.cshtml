@@ -1,0 +1,19 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblEnrollment>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.HiddenFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RowNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfStudent)
+        </td>
+    </tr>
+}

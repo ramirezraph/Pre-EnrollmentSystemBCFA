@@ -1,0 +1,151 @@
+﻿@model EnrollBCFA.Models.tblRequirement
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="view-section">
+    <div class="enroll-header">
+        <h3 id="lblEnroll">Enrollment</h3>
+    </div>
+    <div class="enroll-container">
+
+        <!-- modal for enrollment success -->
+        <div class="modal fade" id="modalEnrollSuccess" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Success:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Student: <label id="lblstudent"> </label> is now enrolled.</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- modal for already enrolled -->
+        <div class="modal fade" id="modalAlreadyEnrolled" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Message:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>The student is already enrolled. Please Check.</h5>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- modal for null -->
+        <div class="modal fade" id="modalNoRecord" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="color: rgb(21,21,21);">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Message:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Student data not found.</h5>
+                        <h5><strong>NOTE:</strong> Use the search box to search for student.</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="row">
+                <div class="col-md-5">
+
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                           @Html.DropDownList("comboboxSearch", null, null, new { @class = "combobox-for-search txtSearchStudent" })
+                        </div>
+                        <div class="col-md-6">
+                            <button id="btnSearchEnroll" class="btn btn-default">Search Student</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <br />
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Enrollment ID:</label><br />
+                @Html.TextBox("enrollmentidenroll", null, new { @class = "textbox-for-enroll", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Academic Year:</label><br />
+                @Html.TextBox("academicyearenroll", null, new { @class = "textbox-for-enroll", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Status:</label><br />
+                @Html.TextBox("statusenroll", null, new { @class = "textbox-for-enroll txtStatus", @readonly ="readonly" })
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Student ID:</label><br />
+                @Html.TextBox("studentidenroll", null, new { @class = "textbox-for-enroll", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Grade Level:</label><br />
+                @Html.DropDownList("gradelevelenroll", null, null, new { @class = "combobox-for-enroll" })
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <!-- Blank -->
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Name:</label><br />
+                @Html.TextBox("nameenroll", null, new { @class = "textbox-for-enroll", @readonly = "readonly" })
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Section:</label><br />
+                @Html.DropDownList("sectionenroll", null, null, new { @class = "combobox-for-enroll" })
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <!-- Blank -->
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+            <div class="col-md-4 col-lg-4">
+                <label class="enroll-label ">Type:</label><br />
+                @Html.TextBox("typeenroll", null, new { @class = "textbox-for-enroll", @readonly = "readonly" })
+            </div>
+            <div class="col-md-8 col-lg-8">
+                <br />
+                <button id="btnEnroll" class="btn btn-primary" style="padding-left: 7%;padding-right: 7%;">Enroll</button>
+                <a id="btnPrintEnrollment" class="btn btn-warning btnPrint" href="@Url.Action("PrintEnrollment","Enrollment")" onclick="PassDataEnroll()">Print Preview</a>
+                <button id="btnResetEnroll" class="btn btn-danger" style="padding-left: 7%;padding-right: 7%;">Reset</button>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+            <div class="row" style="color: rgb(21,21,21);">
+                <div id="TableEnrollDiv">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

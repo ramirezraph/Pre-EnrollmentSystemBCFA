@@ -1,0 +1,103 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblStudentInformation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="view-section">
+    <div class="student-header">
+        <h3 id="lblStudent">Student Masterlist</h3>
+    </div>
+    <div class="student-container">
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="acad-year">Academic Year: 2017-2018</h5>
+            </div>
+            <div class="col-md-6">
+                <!-- blank -->
+            </div>
+            <br />
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="@Url.Action("Create", "tblStudentInformations")" class="btn btn-primary btnAddSubject">Add Student</a>
+            </div>
+        </div>
+        <table class="table table-hover table-striped teacher-table">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StMiddleName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StAge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StContact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StGender)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.StudentID })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.StudentID })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.StudentID })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StMiddleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StAge)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StContact)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StGender)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+       

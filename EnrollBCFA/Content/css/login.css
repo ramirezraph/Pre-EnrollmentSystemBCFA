@@ -1,0 +1,67 @@
+﻿/* 
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+*/
+#login-body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: 0;
+    background-image: url("/Content/Images/blur-image.jpg");
+    background-size: cover;
+}
+
+.login-container {
+    color: #ecf0f1;
+    width: 100%;
+    margin-top: 7.5%;
+    margin-left: 4%;
+}
+.login-textnlogo {
+    background-color: rgb(19, 19, 19);
+    height: 500px;
+}
+.login-textnlogo h1{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: Tahoma;
+}
+.login-form {
+    padding-top: 2%;
+    width: 80%;
+    height: 500px;
+    background-color: rgb(19, 19, 19);
+}
+.login-form h1, .login-form h5 {
+    margin-left: 15%;
+    font-family: 'Ubuntu', sans-serif;
+}
+.login-label {
+    margin-top: 6%;
+    margin-left: 20%;
+}
+.login-textbox {
+    height: 25px;
+    color: rgb(21, 21, 21);
+    margin-left: 20%;
+    padding-left: 2%;
+}
+.btnLogin {
+    width: 150px;
+    height: 35px;
+    margin-top: 5%;
+    margin-left: 15.7%;
+}
+.img-biglogo {
+    width: 400px;
+    height: 400px;
+    margin-left: 14%;
+    margin-top: 8%;
+}
+.login-form .field-validation-error {
+    margin-left: 20%;
+    color: rgb(214,69,65);
+    font-size: 12px;
+    font-family: 'Titillium Web', sans-serif;
+}

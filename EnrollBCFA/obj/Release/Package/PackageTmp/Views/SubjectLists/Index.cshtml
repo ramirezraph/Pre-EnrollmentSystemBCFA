@@ -1,0 +1,60 @@
+﻿@model IEnumerable<EnrollBCFA.Models.SubjectList>
+
+@{
+    ViewBag.Title = "Subjects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="view-section">
+    <div class="subject-header">
+        <h3 id="lblSubject">Subject List</h3>
+    </div>
+    <div class="subject-container">
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <a href="@Url.Action("Create", "SubjectLists")" class="btn btn-primary btnAddSubject">Add New Subject</a>
+            </div>
+        </div>
+        <table class="table table-hover table-striped subject-table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectTeacher)
+                </th>
+                <th></th>
+            </tr>
+            <tbody>
+                @foreach (var subjectItem in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => subjectItem.SubjectCode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => subjectItem.SubjectName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => subjectItem.SubjectType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => subjectItem.SubjectTeacher)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "SubjectLists", new { id = subjectItem.SubjectCode })" class="btn btn-warning btnEditSubject">Edit</a>
+                            <a href="@Url.Action("Delete", "SubjectLists", new { id = subjectItem.SubjectCode })" class="btn btn-danger btnDeleteSubject">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

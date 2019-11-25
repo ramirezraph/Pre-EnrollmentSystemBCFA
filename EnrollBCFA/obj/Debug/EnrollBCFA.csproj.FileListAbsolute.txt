@@ -1,0 +1,216 @@
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\ApplicationInsights.config
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\csc.exe
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\csc.exe.config
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\csc.rsp
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\csi.exe
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\csi.rsp
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\System.AppContext.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\vbc.exe
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\vbc.exe.config
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\vbc.rsp
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\VBCSCompiler.exe
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\EnrollBCFA.dll.config
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\EnrollBCFA.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\EnrollBCFA.pdb
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Antlr3.Runtime.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.Web.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Newtonsoft.Json.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Helpers.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Mvc.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Optimization.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Razor.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.WebPages.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.WebPages.Razor.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\WebGrease.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Helpers.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Mvc.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Optimization.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.Razor.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.WebPages.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\System.Web.WebPages.Razor.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Antlr3.Runtime.pdb
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Newtonsoft.Json.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.ApplicationInsights.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.WindowsServer.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\Microsoft.AI.Web.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\obj\Debug\EnrollBCFA.csprojResolveAssemblyReference.cache
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\obj\Debug\EnrollBCFA.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\obj\Debug\EnrollBCFA.pdb
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\EntityFramework.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\EntityFramework.SqlServer.dll
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\EntityFramework.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\bin\EntityFramework.SqlServer.xml
+D:\Projects\ASP.NET\EnrollBCFA\EnrollBCFA\obj\Debug\EnrollBCFA.csproj.CoreCompileInputs.cache
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\ApplicationInsights.config
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\csc.exe
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\csc.exe.config
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\csc.rsp
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\csi.exe
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\csi.rsp
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\System.AppContext.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\vbc.exe
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\vbc.exe.config
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\vbc.rsp
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\VBCSCompiler.exe
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\EnrollBCFA.dll.config
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\EnrollBCFA.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\EnrollBCFA.pdb
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Antlr3.Runtime.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\EntityFramework.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\EntityFramework.SqlServer.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.Web.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Newtonsoft.Json.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Helpers.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Mvc.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Optimization.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Razor.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.WebPages.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.WebPages.Razor.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\WebGrease.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\EntityFramework.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\EntityFramework.SqlServer.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Helpers.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Mvc.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Optimization.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.Razor.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.WebPages.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\System.Web.WebPages.Razor.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Antlr3.Runtime.pdb
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Newtonsoft.Json.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.ApplicationInsights.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.WindowsServer.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\bin\Microsoft.AI.Web.xml
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\obj\Debug\EnrollBCFA.csprojResolveAssemblyReference.cache
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\obj\Debug\EnrollBCFA.csproj.CoreCompileInputs.cache
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\obj\Debug\EnrollBCFA.dll
+D:\Projects\ASP.NET\EnrollBCFADev - Copy\EnrollBCFA\obj\Debug\EnrollBCFA.pdb
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\ApplicationInsights.config
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\csc.exe
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\csc.exe.config
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\csc.rsp
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\csi.exe
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\csi.rsp
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\System.AppContext.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\vbc.exe
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\vbc.exe.config
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\vbc.rsp
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\VBCSCompiler.exe
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\EnrollBCFA.dll.config
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\EnrollBCFA.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\EnrollBCFA.pdb
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Antlr3.Runtime.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\EntityFramework.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\EntityFramework.SqlServer.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.Web.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Newtonsoft.Json.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Helpers.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Mvc.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Optimization.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Razor.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.WebPages.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.WebPages.Razor.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\WebGrease.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\EntityFramework.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\EntityFramework.SqlServer.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Helpers.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Mvc.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Optimization.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.Razor.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.WebPages.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\System.Web.WebPages.Razor.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Antlr3.Runtime.pdb
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Newtonsoft.Json.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.ApplicationInsights.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.WindowsServer.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\bin\Microsoft.AI.Web.xml
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\obj\Debug\EnrollBCFA.csprojResolveAssemblyReference.cache
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\obj\Debug\EnrollBCFA.csproj.CoreCompileInputs.cache
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\obj\Debug\EnrollBCFA.dll
+D:\Projects\ASP.NET\EnrollBCFADev\EnrollBCFA\obj\Debug\EnrollBCFA.pdb

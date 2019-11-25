@@ -1,0 +1,68 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblEnrollment>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="class-section">
+    <div class="modal fade" id="modalClassLoadFailed" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" style="color: rgb(21,21,21);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <h5>Please select a section.</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="class-header">
+        <h3 id="lblClass">Classlist Report</h3>
+    </div>
+    <div class="class-header" style="padding-left: 2%; background-color: rgb(13,13,13); height: 100px;">
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="label-for-sched">Grade Level</h5>
+                @Html.DropDownList("varlevelclass", null, "- select level -", new { @class = "combobox-for-class" })
+            </div>
+            <div class="col-md-4" style="margin-left: -7.5%;">
+                <h5 class="label-for-sched">Section</h5>
+                @Html.DropDownList("varsectionclass", null, "- select section -", new { @class = "combobox-for-class" })
+            </div>
+            <div class="col-md-4" style="margin-top: 3%">
+                <button id="loadclass" class="btn btn-primary" style="width: 150px;">Load Data</button>
+                <button id="printclassreport" class="btn btn-warning" style="width: 140px;">Print Report</button>
+            </div>
+        </div>
+    </div>  
+    <div class="class-container" style="padding-left: 2%; color: black;">
+        <div class="row">
+            <table class="table class-table" id="class-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.RowNumber)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.StudentID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NameOfStudent)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="class-partial">
+                    <!-- partial -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

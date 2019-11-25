@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbBcfaSystemModelStoreContainer" CdmEntityContainer="dbBcfaSystemEntitiesData">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.Account">
+        <MappingFragment StoreEntitySet="tblAccounts">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="AccountCreated" ColumnName="AccountCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectLists">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.SubjectList">
+        <MappingFragment StoreEntitySet="tblSubjectList">
+          <ScalarProperty Name="SubjectCode" ColumnName="SubjectCode" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+          <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
+          <ScalarProperty Name="SubjectTeacher" ColumnName="SubjectTeacher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.Teacher">
+        <MappingFragment StoreEntitySet="tblTeacher">
+          <ScalarProperty Name="TeacherName" ColumnName="TeacherName" />
+          <ScalarProperty Name="TeacherContact" ColumnName="TeacherContact" />
+          <ScalarProperty Name="TeacherAddress" ColumnName="TeacherAddress" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStudentInformations">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.tblStudentInformation">
+        <MappingFragment StoreEntitySet="tblStudentInformation">
+          <ScalarProperty Name="StHighAddress" ColumnName="StHighAddress" />
+          <ScalarProperty Name="StHighSchool" ColumnName="StHighSchool" />
+          <ScalarProperty Name="StElemAddress" ColumnName="StElemAddress" />
+          <ScalarProperty Name="StElemSchool" ColumnName="StElemSchool" />
+          <ScalarProperty Name="StParentAddress" ColumnName="StParentAddress" />
+          <ScalarProperty Name="StMotherOccupation" ColumnName="StMotherOccupation" />
+          <ScalarProperty Name="StMotherName" ColumnName="StMotherName" />
+          <ScalarProperty Name="StFatherOccupation" ColumnName="StFatherOccupation" />
+          <ScalarProperty Name="StFatherName" ColumnName="StFatherName" />
+          <ScalarProperty Name="StAddress" ColumnName="StAddress" />
+          <ScalarProperty Name="StReligion" ColumnName="StReligion" />
+          <ScalarProperty Name="StCitizenship" ColumnName="StCitizenship" />
+          <ScalarProperty Name="StMaritalStatus" ColumnName="StMaritalStatus" />
+          <ScalarProperty Name="StGender" ColumnName="StGender" />
+          <ScalarProperty Name="StContact" ColumnName="StContact" />
+          <ScalarProperty Name="StPlaceOfBirth" ColumnName="StPlaceOfBirth" />
+          <ScalarProperty Name="StDateOfBirth" ColumnName="StDateOfBirth" />
+          <ScalarProperty Name="StAge" ColumnName="StAge" />
+          <ScalarProperty Name="StMiddleName" ColumnName="StMiddleName" />
+          <ScalarProperty Name="StFirstName" ColumnName="StFirstName" />
+          <ScalarProperty Name="StLastName" ColumnName="StLastName" />
+          <ScalarProperty Name="StType" ColumnName="StType" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSchoolYears">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.tblSchoolYear">
+        <MappingFragment StoreEntitySet="tblSchoolYear">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEnrollments">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.tblEnrollment">
+        <MappingFragment StoreEntitySet="tblEnrollment">
+          <ScalarProperty Name="DateEnrolled" ColumnName="DateEnrolled" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="GradeLevel" ColumnName="GradeLevel" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StudentType" ColumnName="StudentType" />
+          <ScalarProperty Name="NameOfStudent" ColumnName="NameOfStudent" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="EnrollmentID" ColumnName="EnrollmentID" />
+          <ScalarProperty Name="AcademicYear" ColumnName="AcademicYear" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRequirements">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.tblRequirement">
+        <MappingFragment StoreEntitySet="tblRequirements">
+          <ScalarProperty Name="GradeCard" ColumnName="GradeCard" />
+          <ScalarProperty Name="GoodMoral" ColumnName="GoodMoral" />
+          <ScalarProperty Name="NSO" ColumnName="NSO" />
+          <ScalarProperty Name="Form137" ColumnName="Form137" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSchedules">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.tblSchedule">
+        <MappingFragment StoreEntitySet="tblSchedule">
+          <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="TimeTo" ColumnName="TimeTo" />
+          <ScalarProperty Name="TimeFrom" ColumnName="TimeFrom" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+          <ScalarProperty Name="Friday" ColumnName="Friday" />
+          <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+          <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+          <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+          <ScalarProperty Name="Monday" ColumnName="Monday" />
+          <ScalarProperty Name="DescriptiveTitle" ColumnName="DescriptiveTitle" />
+          <ScalarProperty Name="SubjectCode" ColumnName="SubjectCode" />
+          <ScalarProperty Name="Adviser" ColumnName="Adviser" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="GradeLevel" ColumnName="GradeLevel" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AcademicYear" ColumnName="AcademicYear" />
+          <ScalarProperty Name="SchedID" ColumnName="SchedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSections">
+      <EntityTypeMapping TypeName="dbBcfaSystemModel.tblSection">
+        <MappingFragment StoreEntitySet="tblSection">
+          <ScalarProperty Name="SectionAdviser" ColumnName="SectionAdviser" />
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="GradeLevel" ColumnName="GradeLevel" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="SType" ColumnName="SType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

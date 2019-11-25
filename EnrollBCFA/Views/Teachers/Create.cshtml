@@ -1,0 +1,72 @@
+﻿@model EnrollBCFA.Models.Teacher
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="view-section">
+    <div class="teacher-header">
+        <h3 id="lblTeacher">Add New Teacher</h3>
+    </div>
+    <div class="teacher-container">
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <label class="text-danger" style="margin-left: 17.5%;">@Html.DisplayFor(model => model.CreateMessage)</label>
+            </div>
+        </div>
+        <br />
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TeacherID, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TeacherID, new { htmlAttributes = new { @class = "form-control" } })
+                        <label style="font-size: 14px; font-weight:normal; color: indianred;">(unique)</label><br />
+                        @Html.ValidationMessageFor(model => model.TeacherID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TeacherName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TeacherName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TeacherName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TeacherAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TeacherAddress, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TeacherAddress, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TeacherContact, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TeacherContact, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TeacherContact, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Add Teacher" class="btn btn-success btnSaveEditSubject" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            <a href="@Url.Action("Index", "Teachers")" class="btnBackToList">&#8592; Back to list</a>
+        </div>
+    </div>
+</div>
+
+

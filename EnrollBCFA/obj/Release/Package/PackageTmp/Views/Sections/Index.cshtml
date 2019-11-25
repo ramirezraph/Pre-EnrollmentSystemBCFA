@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblSection>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="view-section">
+    <div class="section-header">
+        <h3 id="lblSection">Section List</h3>
+    </div>
+    <div class="section-container">
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <a href="@Url.Action("Create", "Sections")" class="btn btn-primary btnAddSection">Add New Section</a>
+            </div>
+        </div>
+        <table class="table table-hover table-striped section-table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradeLevel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SectionName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SectionAdviser)
+                </th>
+                <th></th>
+            </tr>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(model => item.SType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.GradeLevel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.SectionName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.SectionAdviser)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Sections", new { id = item.SectionName })" class="btn btn-warning btnEditSection">Edit</a>
+                            <a href="@Url.Action("Delete", "Sections", new { id = item.SectionName })" class="btn btn-danger btnDeleteSection">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+
+        </table>zs
+    </div>
+</div>
+
+

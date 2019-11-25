@@ -1,0 +1,33 @@
+﻿@model IEnumerable<EnrollBCFA.Models.tblEnrollment>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            <button class="btn btn-success es-btn" onclick="SelectES(@item.id)">Select</button>
+        </td>
+        <td>
+            @Html.HiddenFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfStudent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradeLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Section)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateEnrolled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+    </tr>
+}

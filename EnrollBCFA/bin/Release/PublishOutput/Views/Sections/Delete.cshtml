@@ -1,0 +1,74 @@
+﻿@model EnrollBCFA.Models.tblSection
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="view-section">
+    <div class="section-header">
+        <h3 id="lblSection">Delete Section</h3>
+    </div>
+    <div class="section-container" style="color: lightgray; padding-left: 3%;">
+        <h3 class="text-danger">Are you sure you want to delete this?</h3>
+        <div>
+            <br />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.SectionName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SectionName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.GradeLevel)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.GradeLevel)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SectionAdviser)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SectionAdviser)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-actions no-color">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" value="Yes, please delete." class="btn btn-danger btnSaveEdit" style="margin-left: 19%;" />
+                        </div>
+                        <div class="col-md-12">
+                            <a href="@Url.Action("Index", "Sections")" class="btnBackToList">&#8592; Back to list</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+

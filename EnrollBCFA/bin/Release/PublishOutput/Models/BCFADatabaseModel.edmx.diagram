@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c16753d9b2d04148b5b65340ece699cf" Name="Diagram1">
+        <EntityTypeShape EntityType="dbBcfaSystemModel.Account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.SubjectList" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.Teacher" Width="1.5" PointX="4.625" PointY="0.75" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.tblStudentInformation" Width="1.5" PointX="6.5" PointY="0.75" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.tblSchoolYear" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.tblEnrollment" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.tblRequirement" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.tblSchedule" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="dbBcfaSystemModel.tblSection" Width="1.5" PointX="6.75" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

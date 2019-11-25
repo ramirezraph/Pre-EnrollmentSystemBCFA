@@ -1,0 +1,30 @@
+﻿@model IEnumerable<EnrollBCFA.Models.Account>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            <button class="btn btn-success es-btn" onclick="SelectAccount(@item.AccountID)">Select</button>
+        </td>
+        <td>
+            @Html.HiddenFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastLogin)
+        </td>
+    </tr>
+}

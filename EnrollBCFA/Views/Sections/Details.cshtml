@@ -1,0 +1,51 @@
+﻿@model EnrollBCFA.Models.tblSection
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SectionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SectionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GradeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GradeLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SectionAdviser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SectionAdviser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SectionName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

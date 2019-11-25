@@ -1,0 +1,89 @@
+﻿.es-header {
+    width: 100%;
+    height: 40px;
+    background-color: #ecf0f1;
+    color: rgb(36,36,36);
+}
+
+.es-container {
+    color: lightgray;
+    padding-left: 3%;
+}
+
+#lblEs {
+    position: relative;
+    left: 3%;
+    top: 15%;
+}
+
+.es-label {
+    font-weight: normal;
+    font-size: 15px;
+    margin-left: 10%;
+    color: lightgray;
+}
+
+.es-container {
+    width: 100%;
+    height: auto;
+    color: rgb(21,21,21);
+}
+
+.es-table-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.es-table {
+    background-color: #ecf0f1;
+    height: auto;
+    width: 97%;
+    margin-top: 2%;
+    padding: 0;
+}
+
+.es-table tr th {
+    color: indianred;
+    background-color: #ecf0f1;
+}
+.table-hover tr:hover td, .table-hover tr:hover {
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.form-horizontal {
+    color: whitesmoke;
+}
+.textbox-for-es-short {
+    padding-left: 3%;
+    color: rgb(21,21,21);
+    height: 25px;
+    width: 150px;
+    margin-left: 2%;
+}
+.textbox-for-es-long {
+    padding-left: 3%;
+    color: rgb(21,21,21);
+    height: 25px;
+    width: 230px;
+    margin-left: 2%;
+}
+
+.dl-horizontal dt {
+    color: rgb(222,184,135);
+}
+#btnSearchEnrolled {
+    padding: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 30px;
+    position: relative;
+    left: 22%;
+}
+.es-btn {
+    padding: 0;
+    padding-left: 35%;
+    padding-right: 35%;
+    height: 25px;
+}
